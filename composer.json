@@ -1,0 +1,54 @@
+{
+    "name": "robertmarney/laravel-hashid-relationships",
+    "description": "Supports deep hashids for serialized APIs",
+    "keywords": [
+        "robertmarney",
+        "laravel-hashid-relationships"
+    ],
+    "homepage": "https://github.com/robertmarney/laravel-hashid-relationships",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Robert M",
+            "email": "robert.marney@vistaprojects.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Robertmarney\\LaravelHashidRelationships\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Robertmarney\\LaravelHashidRelationships\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Robertmarney\\LaravelHashidRelationships\\LaravelHashidRelationshipsServiceProvider"
+            ],
+            "aliases": {
+                "LaravelHashidRelationships": "Robertmarney\\LaravelHashidRelationships\\LaravelHashidRelationshipsFacade"
+            }
+        }
+    }
+}
